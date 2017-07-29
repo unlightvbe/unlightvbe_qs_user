@@ -13,4 +13,7 @@
 
 備註：
 
-整體流程：先將本專案fork之後，再行加入或修改，最後發Pull Request
+1.整體流程：先將本專案fork之後，再行加入或修改，最後發Pull Request
+
+#### 2.本專案為Big5編碼，CRLF換行，請在push時將git的換行符號自動轉換的功能關閉
+命令列輸入：git config --global core.autocrlf false
