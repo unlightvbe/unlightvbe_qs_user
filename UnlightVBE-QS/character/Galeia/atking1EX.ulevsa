@@ -1,3 +1,4 @@
+Dim pagecheck()
 Function main(a)
     Select Case a
          Case 1
@@ -51,19 +52,29 @@ Function atking(a, VBEPersonVS(), VBEPageCardNumVS(), AtkingPagetotVS(), VBEPers
           '============如果沒有偵測到的話
           atking = atking & "PersonAddBuff#1,1,BUFFS00201,0,2" & "="
         Case 99
+          Dim numtot, DEFCheck
+          k = 0
+          ReDim pagecheck(UBound(VBEPageCardNumVS, 1))
           If VBEAtkingVSS(12) = 3 And VBEAtkingVSS(6) < 3 Then  '如果在攻擊階段且為中、近距離時
                 If AtkingPagetotVS(1, 1) >= 5  And AtkingPagetotVS(1, 2) >= 1 Then  '如果手牌符合條件時
                     atking = atking & "EventActiveAIScore#1,1"
                     Do
+                        m = AtkingPagetotVS(1, 1) - k
                         k = k + 1
                         For i = 1 To UBound(VBEPageCardNumVS, 1)
-                            '防禦牌、數值從1開始選擇，選擇到符合條件的牌時即跳出
-                            If VBEPageCardNumVS(i, 1) = 2 And VBEPageCardNumVS(i, 2) = k Then
+                            '劍，數值從持有手牌最大值開始選擇
+                            If VBEPageCardNumVS(i, 1) = 1 And VBEPageCardNumVS(i, 2) = m And pagecheck(i) = 0 And numtot < 5 Then
                                 atking = atking & "," & i
-                                Exit Do
+                                pagecheck(i) = 1
+                                numtot = numtot + m
+                            '防禦、數值從1開始選擇
+                            ElseIf VBEPageCardNumVS(i, 1) = 2 And VBEPageCardNumVS(i, 2) = k And pagecheck(i) = 0 And DEFCheck = False Then
+                                atking = atking & "," & i
+                                pagecheck(i) = 1
+                                DEFCheck = True
                             End If
                         Next
-                    Loop
+                    Loop Until (numtot >= 5 And DEFCheck = True)
                     atking = atking & "="
                 End If
           End If

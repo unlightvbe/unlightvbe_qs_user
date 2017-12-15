@@ -52,7 +52,9 @@ Function atking(a, VBEPersonVS(), VBEPageCardNumVS(), AtkingPagetotVS(), VBEPers
                   End If
                End If
           Next
-          atking = atking & "AtkingSeizeEnemyCards#1," & cardnum(0) & "="
+          If cardnum(0) > 0 Then
+            atking = atking & "AtkingSeizeEnemyCards#1," & cardnum(0) & "="
+          End If
         Case 99
           Dim numtot, k, m
           ReDim pagecheck(UBound(VBEPageCardNumVS, 1))  '卡牌選擇標記變數
