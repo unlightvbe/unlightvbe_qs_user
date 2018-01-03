@@ -13,7 +13,7 @@ personengname=Noella
 personpname=Mystic
 personlevel1=LV
 personlevel2=5
-cardid=N02105
+cardid=N02805
 persontg=731000
 personbig=Noella\Noellabig.png
 personmini=Noella\Noellastand.png
@@ -25,10 +25,10 @@ smalldownleftus=50
 smalldowntopus=-50
 smalldownleftcom=50
 smalldowntopcom=-50
-atkingname(1)=PNAKN02101=atking1.ulevsa
-atkingname(2)=PNAKN02102=atking2.ulevsa
-atkingname(3)=PNAKN02103=atking3.ulevsa
-atkingname(4)=PNAKN02104=atking4.ulevsa
+atkingname(1)=PNAKN02801=atking1.ulevsa
+atkingname(2)=PNAKN02802=atking2.ulevsa
+atkingname(3)=PNAKN02803=atking3.ulevsa
+atkingname(4)=PNAKN02804=atking4.ulevsa
 EndPerson
 
 StartTalk=ø’¶„€i=LV

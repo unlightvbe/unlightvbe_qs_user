@@ -1,7 +1,7 @@
 Function main(a)
     Select Case a
          Case 1
-              main = "PNAKN02102"
+              main = "PNAKN02802"
          Case 2
               main = "43#32#34"
          Case 3

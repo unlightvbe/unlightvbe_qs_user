@@ -1,7 +1,7 @@
 Function main(a)
     Select Case a
          Case 1
-              main = "PNAKN02101"
+              main = "PNAKN02801"
          Case 2
               main = "42#45#29#14"
          Case 3
@@ -13,7 +13,7 @@ Function main(a)
          Case 6
               main = "槍合計4以上#54a"
          Case 7
-              main = "ATK+8，攻擊成攻時，給予對戰對手「自壞」(5回合)"
+              main = "ATK+8，攻擊成功時，給予對戰對手「自壞」(5回合)"
     End Select
 End Function
 
