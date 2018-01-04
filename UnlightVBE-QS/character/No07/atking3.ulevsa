@@ -57,5 +57,6 @@ Function atking(a, VBEPersonVS(), VBEPageCardNumVS(), AtkingPagetotVS(), VBEPers
 		If AtkingckVSF(2, 1) = "1" Then
 			atking = atking & "AtkingInformationRecord#0" & "="
 		End If
+		atking = atking & "AtkingTurnOnOff#2" & "="
     End Select
 End Function
