@@ -4,7 +4,7 @@ MenuList=LV5
 EndFirst
 
 StartPerson=LV5=艾蕾可
-cardjpgus=Alec\AlecLV5.jpg
+cardjpg=Alec\AlecLV5.jpg
 personhp=8
 personatk=6
 persondef=11
@@ -33,7 +33,7 @@ atkingdfont(3)=8
 atkingdfont(4)=8
 EndPerson
 
-StartTalk=艾蕾可
+StartTalk=艾蕾可=LV
 TalkA1=雖名為騎士，但只是暴政的魁儡嗎……=艾伯李斯特
 TalkA2=你的劍，應當成為聯合王國的力量。=阿貝爾
 TalkA3=我不會讓你再傷害我的人民。=貝琳達

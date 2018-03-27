@@ -1,63 +1,66 @@
-Dim cardnum
+Dim defnum, cardnum
 Function main(a)
     Select Case a
          Case 1
-              main = "PNAKS00501"
+              main = "PNAKS00503"
          Case 2
-              main = "43#45#31#29#99"
+              main = "42#11#23#99"
          Case 3
-              main = "王座之炎"
+              main = "聖王威光"
          Case 4
-              main = "防禦#2"
+              main = "攻擊#1"
          Case 5
               main = "全距離#111"
          Case 6
-              main = "劍合計5以上#15a"
+              main = "特合計3以上#43a"
          Case 7
-              main = "DEF+自己所出的牌張數x3，減輕自己手牌張數x1的傷害。"
+              main = "對手防禦成功時，給予其防禦力÷4(尾數進位)的傷害，如果這次戰鬥對手沒有出牌，額外給對手2點傷害。"
     End Select
 End Function
 
 Function atking(a, VBEPersonVS(), VBEPageCardNumVS(), AtkingPagetotVS(), VBEPersonBuffVSF(), VBEPersonBuffVSS(), AtkingckVSS(), AtkingckVSF(), VBEAtkingVSF(), VBEAtkingVSS(), VBEActualStatusVS(), VBEVSStageNum())
     Select Case a
-        Case 43
-            If AtkingPagetotVS(1, 1) >= 5 Then
-               If AtkingckVSS(1, 1) = 0 Then
+        Case 42
+            If AtkingPagetotVS(1, 4) >= 3 Then
+               If AtkingckVSS(3, 1) = 0 Then
                     atking = atking & "AtkingLineLight#1" & "="
                     atking = atking & "AtkingTurnOnOff#1" & "="
                End If
             Else
-               If AtkingckVSS(1, 1) = 1 Then
+               If AtkingckVSS(3, 1) = 1 Then
                     atking = atking & "AtkingLineLight#2" & "="
                     atking = atking & "AtkingTurnOnOff#2" & "="
                End If
             End If
-        Case 45
-            atking = atking & "EventTotalDiceChange#1,1," & VBEAtkingVSS(1) * 3 & "="
-        Case 31
-            atking = atking & "AtkingStartPlay#" & "\gif\Alec\atking1-1.jpg,\gif\Alec\atking1-2.jpg" & "="
+        Case 11
+            atking = atking & "AtkingStartPlay#" & "\gif\Alec\atking3-1.jpg,\gif\Alec\atking3-2.jpg" & "="
             atking = atking & "AtkingLineLight#2" & "="
-            cardnum = VBEAtkingVSS(1)
-        Case 29
-            If cardnum > 4 Then cardnum = 4
-            atking = atking & "AtkingTrueDiceControl#2," & cardnum & "="
+            defnum = VBEAtkingVSS(8)
+            cardnum = VBEAtkingVSS(3)
+        Case 23
+            If VBEAtkingVSS(5) <= 0 Then
+                atking = atking & "PersonBloodControl#2,1,1," & -Int(-(defnum / 4)) & "="
+                If cardnum = 0 Then
+                    atking = atking & "PersonBloodControl#2,1,1,2" & "="
+                End If
+            End If
             atking = atking & "AtkingTurnOnOff#2" & "="
         Case 99
             Dim k, m, numtot
             k = 0
-            If VBEAtkingVSS(12) = 4 And VBEAtkingVSS(13) = 2 Then
-                If AtkingPagetotVS(1, 1) >= 5 Then
-                    atking = atking & "EventActiveAIScore#1,2"
+            If VBEAtkingVSS(12) = 3 And VBEAtkingVSS(13) = 1 Then
+                If AtkingPagetotVS(1, 4) >= 3 Then
+                    atking = atking & "EventActiveAIScore#1,1"
                     Do
-                        m = AtkingPagetotVS(1, 1) - k
+                        m = AtkingPagetotVS(1, 4) - k
                         k = k + 1
                         For i = 1 To UBound(VBEPageCardNumVS, 1)
-                            If VBEPageCardNumVS(i, 1) = 1 And VBEPageCardNumVS(i, 2) = m And numtot < 5 Then
+                            If VBEPageCardNumVS(i, 1) = 4 And VBEPageCardNumVS(i, 2) = m And numtot < 3 Then
                                 atking = atking & "," & i
                                 numtot = numtot + m
                             End If
                         Next
-                    Loop Until numtot >= 5
+                    Loop Until numtot >= 3
                     atking = atking & "="
                 End If
             End If
