@@ -36,7 +36,7 @@ Function atking(a, VBEPersonVS(), VBEPageCardNumVS(), AtkingPagetotVS(), VBEPers
 	Case 5
           atking = atking & "AtkingStartPlay#" & "\gif\No07\atking.jpg,0" & "="
         Case 61
-          atking = atking & "AtkingDrawCards#1,1" & "="
+          atking = atking & "AtkingDrawCards#1,1,1" & "="
 	Case 52
           atking = atking & "AtkingLineLight#2" & "="
 	  atking = atking & "AtkingTurnOnOff#2" & "="
