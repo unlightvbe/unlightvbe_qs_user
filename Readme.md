@@ -8,7 +8,8 @@ Unlight Virtual Battle Emulator
 
 開發語言：Visual Basic 6、Visual Basic Script
 
-版本資訊：QS型（或稱「X代」）用戶版
+版本資訊：QS型用戶版
+> 其實QS發音等同於英文的X，維基百科有寫。
 
 本專案為讓使用者遊玩下載用，並不包含程式本體的原始碼，請需注意。
 
@@ -36,3 +37,6 @@ Unlight Virtual Battle Emulator
 ## 未來計畫
 第一，因為本專案的性質，故不做任何宣傳。
 > 也許來自未來的人類會發現這個專案也說不定……。
+
+第二，因為本專案的編輯進度，遊戲翻譯暫不考慮。
+> 要是被TechWay知道這個專案的存在，……。
