@@ -1,4 +1,4 @@
-# 星幽之光 虛擬戰鬥模擬器
+# 星幽之光虛擬戰鬥模擬器
 Unlight Virtual Battle Emulator
 
 ## 簡介
