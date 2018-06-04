@@ -14,7 +14,7 @@ Function main(a)
          Case 6
               main = "防合計1以上、移合計1以上#21a&31a"
          Case 7
-              main = "HP+1&=接下來的2回合，自己的事件卡變為「HP回復3」。"
+              main = "HP+1&接下來的2回合，自己的事件卡變為「HP回復3」。"
     End Select
 End Function
 
