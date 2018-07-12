@@ -25,6 +25,10 @@ smalldownleftus=-20
 smalldowntopus=-70
 smalldownleftcom=30
 smalldowntopcom=-70
+atkingname(1)=PNAKS00701=atking1.ulevsa
+atkingname(2)=PNAKS00702=atking2.ulevsa
+atkingname(3)=PNAKS00703=atking3.ulevsa
+atkingname(4)=PNAKS00704=atking4.ulevsa
 EndPerson
 
 StartTalk=¥d»e¥§¨È=LV
