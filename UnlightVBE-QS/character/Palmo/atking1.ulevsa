@@ -47,9 +47,16 @@ Function atking(a, VBEPersonVS(), VBEPageCardNumVS(), AtkingPagetotVS(), VBEPers
             '============如果沒有偵測到的話
             atking = atking & "PersonAddBuff#1,1,BUFFN01401,0,1" & "="
         Case 99
-            k = 0
+            Dim buffnum
+            k = 0 : buffnum = 0
             If VBEAtkingVSS(12) = 2 Then
-                If AtkingPagetotVS(1, 4) >= 1 Then
+                For i = 1 To UBound(VBEPersonBuffVSS, 3)
+                    If VBEPersonBuffVSS(1, 1, i) = "BUFFN01401" Then
+                        buffnum = VBEPersonBuffVSF(1, 1, i, 2)
+                        Exit For
+                    End If
+                Next
+                If AtkingPagetotVS(1, 4) >= 1 And buffnum < 9 Then
                     atking = atking & "EventActiveAIScore#1,1"
                     Do
                         k = k + 1
