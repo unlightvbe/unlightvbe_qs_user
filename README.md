@@ -32,7 +32,7 @@ VBE在經歷了2個正式版本的發布（Version α、Version ζ）後，雖�
 任何開發者若想加入自創角色或想協助修正錯誤者皆可發出Pull Request，本人會由衷感謝您對本專案的奉獻。
 
 >- 整體流程：先將本專案fork之後，再行加入或修改，最後發Pull Request  
->- 自創角色經確認並進行Merge後即可立即成為QS版可遊玩角色之一  
+>- 自創角色經審閱確認並進行公開閱覽後即可成為本專案中可遊玩角色之一  
 >- **本專案為Big5編碼，CRLF換行，請在push時將git的換行符號自動轉換的功能關閉**  
 命令列輸入：```git config --global core.autocrlf false```
 
